@@ -1,0 +1,11 @@
+﻿{
+  "name": "Whole Wheat Bread",
+  "description": "500g loaf",
+  "unit": "pack",
+  "price": 45.0,
+  "shelfLifeDays": 3,
+  "stockQuantity": 100,
+  "category": "Bakery",
+  "imageUrl": "https://example.com/bread.jpg",
+  "isActive": true
+}

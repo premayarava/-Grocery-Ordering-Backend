@@ -1,0 +1,11 @@
+﻿{
+  "name": "Organic Banana",
+  "description": "Fresh bananas",
+  "unit": "kg",
+  "price": 59.0,
+  "shelfLifeDays": 5,
+  "stockQuantity": 200,
+  "category": "Fruits",
+  "imageUrl": "https://example.com/banana.jpg",
+  "isActive": true
+}

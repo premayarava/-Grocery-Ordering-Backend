@@ -1,0 +1,70 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: http://user-service:8081
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - StripPrefix=0
+        - id: user-service-actuator
+          uri: http://user-service:8081
+          predicates:
+            - Path=/user-service/actuator/**
+          filters:
+            - StripPrefix=1
+        - id: product-catalog-service
+          uri: http://product-catalog-service:8082
+          predicates:
+            - Path=/api/products/**
+          filters:
+            - StripPrefix=0
+        - id: product-catalog-service-actuator
+          uri: http://product-catalog-service:8082
+          predicates:
+            - Path=/product-catalog-service/actuator/**
+          filters:
+            - StripPrefix=1
+        - id: cart-service
+          uri: http://cart-service:8083
+          predicates:
+            - Path=/api/cart/**
+          filters:
+            - StripPrefix=0
+        - id: cart-service-actuator
+          uri: http://cart-service:8083
+          predicates:
+            - Path=/cart-service/actuator/**
+          filters:
+            - StripPrefix=1
+        - id: order-service
+          uri: http://order-service:8084
+          predicates:
+            - Path=/api/orders/**
+          filters:
+            - StripPrefix=0
+        - id: order-service-actuator
+          uri: http://order-service:8084
+          predicates:
+            - Path=/order-service/actuator/**
+          filters:
+            - StripPrefix=1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
