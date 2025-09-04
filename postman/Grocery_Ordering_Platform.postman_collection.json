@@ -21,7 +21,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"firebaseUid\": \"user123\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"+1234567890\",\n  \"role\": \"CONSUMER\"\n}"
+							"raw": "{\n  \"firebaseUid\": \"user123\",\n  \"firstName\": \"babu\",\n  \"lastName\": \"reddy\",\n  \"email\": \"babureddy@example.com\",\n  \"phoneNumber\": \"+1234567890\",\n  \"role\": \"CONSUMER\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/users/register",
@@ -75,7 +75,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"firstName\": \"John Updated\",\n  \"lastName\": \"Doe Updated\",\n  \"phoneNumber\": \"+1234567891\"\n}"
+							"raw": "{\n  \"firstName\": \"babu Updated\",\n  \"lastName\": \"reddy Updated\",\n  \"phoneNumber\": \"+1234567891\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/users/profile",
