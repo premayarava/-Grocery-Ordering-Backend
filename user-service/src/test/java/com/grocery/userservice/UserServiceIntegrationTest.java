@@ -40,9 +40,9 @@ class UserServiceIntegrationTest {
         // Given
         UserRegistrationRequest request = new UserRegistrationRequest();
         request.setFirebaseUid("test-user-123");
-        request.setFirstName("John");
-        request.setLastName("Doe");
-        request.setEmail("john.doe@test.com");
+        request.setFirstName("babu");
+        request.setLastName("reddy");
+        request.setEmail("babureddy@test.com");
         request.setPhoneNumber("+1234567890");
         request.setRole("CONSUMER");
 
@@ -52,9 +52,9 @@ class UserServiceIntegrationTest {
         // Then
         assertNotNull(response);
         assertEquals("test-user-123", response.getFirebaseUid());
-        assertEquals("John", response.getFirstName());
-        assertEquals("Doe", response.getLastName());
-        assertEquals("john.doe@test.com", response.getEmail());
+        assertEquals("babu", response.getFirstName());
+        assertEquals("reddy", response.getLastName());
+        assertEquals("babureddy@test.com", response.getEmail());
         assertEquals("+1234567890", response.getPhoneNumber());
         assertEquals(UserRole.CONSUMER, response.getRole());
         assertNotNull(response.getCreatedAt());
@@ -66,9 +66,9 @@ class UserServiceIntegrationTest {
         // Given
         UserRegistrationRequest request = new UserRegistrationRequest();
         request.setFirebaseUid("test-user-456");
-        request.setFirstName("Jane");
-        request.setLastName("Smith");
-        request.setEmail("jane.smith@test.com");
+        request.setFirstName("prema");
+        request.setLastName("reddy");
+        request.setEmail("premareddy@test.com");
         request.setRole("CONSUMER");
 
         userService.registerUser(request);
@@ -79,9 +79,9 @@ class UserServiceIntegrationTest {
         // Then
         assertNotNull(response);
         assertEquals("test-user-456", response.getFirebaseUid());
-        assertEquals("Jane", response.getFirstName());
-        assertEquals("Smith", response.getLastName());
-        assertEquals("jane.smith@test.com", response.getEmail());
+        assertEquals("prema", response.getFirstName());
+        assertEquals("reddy", response.getLastName());
+        assertEquals("premareddy@test.com", response.getEmail());
     }
 
     @Test
@@ -89,9 +89,9 @@ class UserServiceIntegrationTest {
         // Given
         UserRegistrationRequest createRequest = new UserRegistrationRequest();
         createRequest.setFirebaseUid("test-user-789");
-        createRequest.setFirstName("Bob");
-        createRequest.setLastName("Johnson");
-        createRequest.setEmail("bob.johnson@test.com");
+        createRequest.setFirstName("naresh");
+        createRequest.setLastName("reddy");
+        createRequest.setEmail("nareshreddy@test.com");
         createRequest.setRole("CONSUMER");
 
         userService.registerUser(createRequest);
